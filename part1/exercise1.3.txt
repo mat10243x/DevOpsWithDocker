@@ -1,0 +1,22 @@
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+$ docker run -d --name msg devopsdockeruh/simple-web-service:ubuntu 
+a9bf87a86520008abc5ea40e206b38f4b298568103002de0fe5059a449446a9c
+$ docker ps
+CONTAINER ID   IMAGE                                      COMMAND                 CREATED              STATUS              PORTS     NAMES
+a9bf87a86520   devopsdockeruh/simple-web-service:ubuntu   "/usr/src/app/server"   About a minute ago   Up About a minute             msg
+$ docker container exec -it msg bash
+root@a9bf87a86520:/usr/src/app# tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-03-23 15:59:54 +0000 UTC
+2023-03-23 15:59:56 +0000 UTC
+2023-03-23 15:59:58 +0000 UTC
+2023-03-23 16:00:00 +0000 UTC
+2023-03-23 16:00:02 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-03-23 16:00:04 +0000 UTC
+2023-03-23 16:00:06 +0000 UTC
+2023-03-23 16:00:08 +0000 UTC
+2023-03-23 16:00:10 +0000 UTC
+^C
+root@a9bf87a86520:/usr/src/app#
