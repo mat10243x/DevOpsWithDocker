@@ -1,0 +1,41 @@
+$ docker pull devopsdockeruh/simple-web-service:alpine
+
+$ docker image ls
+REPOSITORY                          TAG       IMAGE ID       CREATED        SIZE
+ubuntu                              latest    08d22c0ceb15   2 weeks ago    77.8MB
+fav_distro                          bionic    3941d3b032a8   2 weeks ago    63.1MB
+ubuntu                              18.04     3941d3b032a8   2 weeks ago    63.1MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago    83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago    15.7MB
+
+==> The alpine version is smaller than the ubuntu version.
+
+==> Both version write to /usr/src/app/text.log
+
+ubuntu version:
+
+docker exec -it d1bc bash
+root@d1bcda2e3f05:/usr/src/app# ls
+server  text.log
+root@d1bcda2e3f05:/usr/src/app# cat text.log 
+2023-03-24 07:34:15 +0000 UTC
+2023-03-24 07:34:17 +0000 UTC
+2023-03-24 07:34:19 +0000 UTC
+2023-03-24 07:34:21 +0000 UTC
+2023-03-24 07:34:23 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+alpine version:
+
+$ docker exec -it 99e sh
+/usr/src/app # ls
+server    text.log
+/usr/src/app # cat text.log
+2023-03-24 07:15:48 +0000 UTC
+2023-03-24 07:15:50 +0000 UTC
+2023-03-24 07:15:52 +0000 UTC
+2023-03-24 07:15:54 +0000 UTC
+2023-03-24 07:15:56 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+==> Both versions seem to write the same output with the secret message.
