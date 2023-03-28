@@ -1,0 +1,15 @@
+link to project in Docker Hub:
+
+https://hub.docker.com/r/mat10243x/adminer
+
+READ.ME (see also Docker Hub):
+
+This is a mysql graphical user interface for accessing mysql/mariadb databases in the same docker network.
+
+It's using alpine linux, php and nginx to run the adminer.php script on port 5080.
+
+See: https://www.adminer.org/
+
+To run it, execute: docker run -d -p 127.0.0.1:5080:5080 mat10243x/adminer
+
+Open http://localhost:5080 and fill in your database credentials and the ip number of the server running the database (e.g. for the host 172.17.0.1) to connect to the database.
