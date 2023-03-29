@@ -1,0 +1,15 @@
+For this project I use the course page container and run it on my cloudserver.
+
+Building container with:
+
+sudo docker build . -t coursepage
+
+Running container with:
+
+sudo docker run -d -p 8080:80 coursepage
+
+The coursepage can then accessed via http://212.227.205.190:8080
+
+The Dockerfile was only created because it was required, otherwise the coursepage could just directly executed by:
+
+sudo docker run -d -p 8080:80 devopsdockeruh/coursepage
