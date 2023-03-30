@@ -1,0 +1,3 @@
+docker compose up --scale compute=4
+
+(actually the scaling was not necessary on my computer to get the green button, it worked without it, but with scaling it it computes faster)
