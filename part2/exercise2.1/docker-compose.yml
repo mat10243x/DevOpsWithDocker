@@ -3,6 +3,6 @@ version: '3.8'
 services:
     simple-web-service:
         image: devopsdockeruh/simple-web-service
-        build: .
+        #build: .
         volumes:
             - ./text.log:/usr/src/app/text.log
