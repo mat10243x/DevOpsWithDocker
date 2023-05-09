@@ -5,16 +5,11 @@ services:
     example-frontend: 
         build:
             dockerfile: Dockerfile.frontend
-        environment:
-            - REACT_APP_BACKEND_URL=http://localhost:8080
         ports:
             - 5000:5000
 
     example-backend:
         build:
             dockerfile: Dockerfile.backend
-        environment:
-            - PORT=8080
-            - REQUEST_ORIGIN=http://localhost:5000
         ports:
             - 8080:8080
