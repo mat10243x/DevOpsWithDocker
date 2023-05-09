@@ -1,7 +1,9 @@
 version: '3.8'
 
 services:
-
+    redis:
+        image: redis:latest
+    
     example-frontend: 
         build:
             dockerfile: Dockerfile.frontend
@@ -12,13 +14,7 @@ services:
     example-backend:
         build:
             dockerfile: Dockerfile.backend
-        environment:
-            - REDIS_HOST=redis
         ports:
             - 8080:8080
         restart: unless-stopped
     
-    redis:
-        image: redis:latest
-        build: .
-        
