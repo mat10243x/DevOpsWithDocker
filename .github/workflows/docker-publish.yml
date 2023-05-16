@@ -1,4 +1,4 @@
-name: Docker
+name: Release NodeJS app
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -6,14 +6,14 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '18 4 * * *'
+  #schedule:
+  #  - cron: '18 4 * * *'
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
+    #tags: [ 'v*.*.*' ]
+  #pull_request:
+    #branches: [ "main" ]
 
 env:
   # Use docker.io for Docker Hub if empty
