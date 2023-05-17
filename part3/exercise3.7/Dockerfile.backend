@@ -1,0 +1,25 @@
+# changed the golang-docker from standard version (ubuntu)
+# to alpine because that is mentioned in exercise 3.5
+#FROM golang:1.16
+FROM golang:1.16-alpine AS build-env
+
+WORKDIR /usr/src/app
+
+COPY ./example-backend/ .
+
+RUN go build
+
+FROM alpine:latest
+
+WORKDIR /usr/src/app
+
+COPY --from=build-env /usr/src/app/server .
+
+RUN adduser -D appuser
+
+USER appuser
+
+EXPOSE 8080
+
+CMD ["./server"]
+
