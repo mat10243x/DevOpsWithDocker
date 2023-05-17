@@ -1,0 +1,16 @@
+docker image ls
+			REPOSITORY          TAG       IMAGE ID       CREATED         SIZE
+(Alpine)	be_alp1             latest    cc5f18e8880f   2 hours ago     447MB
+(Ubuntu)	be1                 latest    4eb6978b8525   3 hours ago     1.07GB
+(Ubuntu) 	fe1                 latest    27d5ae1d9068   3 hours ago     1.26GB
+
+After optimizing (switching to alpine and combining the RUN's):
+
+REPOSITORY          TAG       IMAGE ID       CREATED          SIZE
+frontend-alpine     latest    da364fa8c5da   48 seconds ago   469MB
+backend-alpine      latest    e31b7a44d87f   3 minutes ago    447MB
+
+After optimizing (splitting backend to build and runtime image):
+(no idea what could be removed from node.js)
+REPOSITORY          TAG       IMAGE ID       CREATED          SIZE
+backend-alpine2     latest    00362c6fbb21   15 seconds ago   25.4MB
