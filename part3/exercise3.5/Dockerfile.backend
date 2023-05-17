@@ -1,0 +1,22 @@
+# changed the golang-docker from standard version (ubuntu)
+# to alpine because that is mentioned in exercise 3.5
+# FROM golang:1.16
+FROM golang:1.16-alpine
+
+WORKDIR /usr/src/app
+
+COPY ./example-backend/ .
+
+RUN go build
+
+# ENV PORT 8080
+
+# REQUEST_ORIGIN https://example.com
+
+RUN adduser -D appuser
+
+USER appuser
+
+EXPOSE 8080
+
+CMD ["./server"]
