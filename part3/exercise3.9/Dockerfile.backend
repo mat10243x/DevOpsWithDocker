@@ -1,0 +1,15 @@
+FROM golang:1.16-alpine AS build-env
+
+WORKDIR /usr/src/app
+
+COPY ./example-backend/ .
+
+RUN CGO_ENABLED=0 go build
+
+FROM scratch
+
+COPY --from=build-env /usr/src/app/server /
+
+EXPOSE 8080
+
+CMD ["/server"]
