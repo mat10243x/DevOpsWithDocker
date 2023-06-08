@@ -1,0 +1,13 @@
+For this project I use the course page container and run it on my cloudserver.
+
+Building container with:
+
+sudo docker build . -t devops_docker_course
+
+Running container with:
+
+sudo docker run -d -p 8080:80 devops_docker_course
+
+The coursepage can then accessed via http://212.227.205.190:8080
+
+To show that exercise 3.2 works I added an index.html before the original index.html.
