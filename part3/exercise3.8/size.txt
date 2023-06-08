@@ -1,0 +1,8 @@
+            REPOSITORY                                    TAG           IMAGE ID       CREATED          SIZE
+
+before multi-stage:
+            frontend_alpine                               latest        ae8e297f7ac7   43 minutes ago   469MB
+with multi-stage:
+            frontend_alpine_multistage                    latest        bd8885ca26ca   10 seconds ago   129MB
+
+
