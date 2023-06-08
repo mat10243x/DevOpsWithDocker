@@ -1,0 +1,8 @@
+
+Before:
+
+REPOSITORY                                   TAG           IMAGE ID       CREATED             SIZE
+gopher1                                      latest        08b5f5ea080d   15 seconds ago      246MB
+
+After optimisation:
+gopher2                                      latest        e3b79b082da4   About a minute ago   43.4MB

@@ -1,0 +1,15 @@
+FROM alpine:3.16
+
+RUN apk update && apk add alpine-sdk libressl-dev && rm -rf /var/cache/apk*
+RUN git clone git://r-36.net/geomyidae
+RUN make -C /geomyidae
+RUN make -C /geomyidae install
+RUN mkdir -p /var/gopher
+RUN mkdir -p /var/gopher/inception
+COPY inception.pdf /var/gopher/inception
+COPY welcome.txt /var/gopher/welcome.txt
+COPY index.gph /var/gopher/index.gph
+
+EXPOSE 70
+
+CMD geomyidae -d -l /var/log/geomyidae.log -b /var/gopher -p 70 -h mtrietz.42.fr

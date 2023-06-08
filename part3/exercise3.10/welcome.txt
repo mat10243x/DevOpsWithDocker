@@ -1,0 +1,29 @@
+ | || |   |___ \ 
+ | || |_    __) |
+ |__   _|  / __/ 
+    |_|   |_____|
+ __        __          _    __         _                            
+ \ \      / /   ___   | |  / _|  ___  | |__    _   _   _ __    __ _ 
+  \ \ /\ / /   / _ \  | | | |_  / __| | '_ \  | | | | | '__|  / _` |
+   \ V  V /   | (_) | | | |  _| \__ \ | |_) | | |_| | | |    | (_| |
+    \_/\_/     \___/  |_| |_|   |___/ |_.__/   \__,_| |_|     \__, |
+                                                              |___/ 
+
+
+Welcome to mtrietz.42.fr gopher service
+
+_Project inception_
+
+This project aims to broaden your knowledge of system administration by using 
+Docker. You will virtualize several Docker images, creating them in your new 
+personal virtual machine.
+
+_What is gopher_
+
+The Gopher protocol is a communication protocol designed for distributing, 
+searching, and retrieving documents in Internet Protocol networks. The 
+design of the Gopher protocol and user interface is menu-driven, and 
+presented an alternative to the World Wide Web in its early stages, but 
+ultimately fell into disfavor, yielding to HTTP. The Gopher ecosystem is 
+often regarded as the effective predecessor of the World Wide Web.
+(from Wikipedia, the free encyclopedia)
